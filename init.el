@@ -32,6 +32,7 @@
 (require 'init-font)
 (require 'init-ido)
 (require 'init-theme)
+(require 'init-git)
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
