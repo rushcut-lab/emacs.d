@@ -31,6 +31,7 @@
 (require 'init-emacs-preference)
 (require 'init-font)
 (require 'init-ido)
+(require 'init-theme)
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
