@@ -34,6 +34,7 @@
 (require 'init-theme)
 (require 'init-git)
 (require 'init-ack)
+(require 'init-editing)
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
