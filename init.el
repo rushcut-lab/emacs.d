@@ -33,6 +33,7 @@
 (require 'init-ido)
 (require 'init-theme)
 (require 'init-git)
+(require 'init-ack)
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
