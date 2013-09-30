@@ -40,6 +40,8 @@
 (require 'init-cursor-move)
 (require 'init-tags)
 (require 'init-my-functions)
+(require 'init-yasnippet)
+;; (require 'init-auto-save)
 
 ;;----------------------------------------------------------------------------
 ;;
@@ -64,6 +66,7 @@
 ;;
 ;;----------------------------------------------------------------------------
 (require 'init-rails)
+(require 'init-lisp)
 
 
 
