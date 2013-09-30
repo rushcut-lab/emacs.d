@@ -29,6 +29,7 @@
 ;;
 ;;----------------------------------------------------------------------------
 (require 'init-emacs-preference)
+(require 'init-project)
 (require 'init-font)
 (require 'init-ido)
 (require 'init-textmate)
