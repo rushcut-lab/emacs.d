@@ -15,10 +15,10 @@
 (setq ac-auto-start 2
       ac-dwim t
       ac-ignore-case nil
-      ac-quick-help-delay 0.5
+      ac-quick-help-delay 1
       ac-fuzzy-enable t
       ac-use-fuzzzy t
-      ac-auto-show-menu 0.2)
+      ac-auto-show-menu 1)
 
 (dolist
     (mode
