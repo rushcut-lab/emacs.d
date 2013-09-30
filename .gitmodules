@@ -1,0 +1,9 @@
+[submodule "site-lisp/rspec-mode"]
+	path = site-lisp/rspec-mode
+	url = https://github.com/rushcut-lab/rspec-mode.git
+[submodule "site-lisp/feature-mode"]
+	path = site-lisp/feature-mode
+	url = https://github.com/rushcut-lab/cucumber.el.git
+[submodule "site-lisp/rinari"]
+	path = site-lisp/rinari
+	url = https://github.com/rushcut-lab/rinari.git
