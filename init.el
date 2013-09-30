@@ -36,6 +36,7 @@
 (require 'init-ack)
 (require 'init-editing)
 (require 'init-cursor-move)
+(require 'init-completion)
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient

@@ -4,8 +4,7 @@
 ;;
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-to-list 'load-path "~/.emacs.d/site-lisp/auto-complete/lib/popup")
-;; (require-package 'popup)
+(require-package 'popup)
 (require-package 'auto-complete)
 (require 'auto-complete-config)
 ;; (global-auto-complete-mode nil)
