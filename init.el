@@ -29,23 +29,41 @@
 ;;
 ;;----------------------------------------------------------------------------
 (require 'init-emacs-preference)
+(require 'init-editing)
+(require 'init-completion)
 (require 'init-project)
 (require 'init-font)
 (require 'init-ido)
 (require 'init-textmate)
-(require 'init-theme)
 (require 'init-git)
 (require 'init-ack)
-(require 'init-editing)
 (require 'init-cursor-move)
-(require 'init-completion)
+
+;;----------------------------------------------------------------------------
+;;
+;; THEMES
+;;
+;;----------------------------------------------------------------------------
+(require 'init-theme)
+(require 'init-modeline)
 
 ;;----------------------------------------------------------------------------
 ;;
 ;; ADV
 ;;
 ;;----------------------------------------------------------------------------
-(require 'init-evil)
+;; (require 'init-evil)
+
+
+
+;;----------------------------------------------------------------------------
+;;
+;; MODES
+;;
+;;----------------------------------------------------------------------------
+(require 'init-rails)
+
+
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
