@@ -80,9 +80,11 @@
   (interactive)
   (browse-url (concat "file://" (buffer-file-name))))
 
-;;
-;; append from ..
-;;
+
+;;----------------------------------------------------------------------------
+;; TODO: CLEAN
+;;----------------------------------------------------------------------------
+
 (defun add-auto-mode (mode &rest patterns)
   "Associate every pattern in `PATTERNS' with `MODE'."
   (dolist (pattern patterns)
@@ -386,19 +388,19 @@ the current position of point, then move it to the beginning of the line."
       (find-file-noselect dir)
       (open-all-files-with-extension dir extension))))
 
-(defun* get-closest-pathname (&optional (file "Makefile"))
-  "Determine the pathname of the first instance of FILE starting from the
- current directory towards root. This may not do the correct thing in presence
- of links. If it does not find FILE, then it shall return the name of FILE in
- the current directory, suitable for creation"
-  (let ((root (expand-file-name "/")))
-    (expand-file-name file
-                      (loop
-                       for d = default-directory then (expand-file-name ".." d)
-                       if (file-exists-p (expand-file-name file d))
-                       return d
-                       if (equal d root)
-                       return nil))))
+;; (defun* get-closest-pathname (&optional (file "Makefile"))
+;;   "Determine the pathname of the first instance of FILE starting from the
+;;  current directory towards root. This may not do the correct thing in presence
+;;  of links. If it does not find FILE, then it shall return the name of FILE in
+;;  the current directory, suitable for creation"
+;;   (let ((root (expand-file-name "/")))
+;;     (expand-file-name file
+;;                       (loop
+;;                        for d = default-directory then (expand-file-name ".." d)
+;;                        if (file-exists-p (expand-file-name file d))
+;;                        return d
+;;                        if (equal d root)
+;;                        return nil))))
 
 (defun ido-goto-symbol (&optional symbol-list)
   "Refresh imenu and jump to a place in the buffer using Ido."
