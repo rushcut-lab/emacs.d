@@ -7,6 +7,6 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
-(setenv "ESHELL" (expand-file-name "/bin/zsh"))
+;; (setenv "ESHELL" (expand-file-name "/bin/zsh"))
 
 (provide 'init-exec-path)
