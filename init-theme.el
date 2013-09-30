@@ -1,6 +1,8 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
-(load-theme 'zenburn t)
+;; (load-theme 'zenburn t)
+(setq cursor-type 'bar)
+(load-theme 'tango t)
 
 ;;(require-package 'color-theme-sanityinc-solarized)
 
@@ -47,7 +49,7 @@
 ;;            (print "Color cycling enabled."))))
 ;; (cycle-colors-toggle t)
 
-;; (global-set-key "\C-xc" 'cycle-colors) 
+;; (global-set-key "\C-xc" 'cycle-colors)
 ;; (global-set-key "\C-xC" '(lambda nil (interactive) (cycle-colors-toggle (not cycle-colors-state))))
 
 (provide 'init-theme)
