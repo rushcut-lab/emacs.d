@@ -2,7 +2,7 @@
 (require-package 'evil)
 
 (evil-mode 1)
-(setq evil-want-C-u-scroll t)
+(setq evil-default-cursor t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; surround
@@ -17,12 +17,18 @@
 (global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
 (global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt)
 
-(setq evil-normal-state-tag   (propertize "N" 'face '((:background "green" :foreground "black")))
-      evil-emacs-state-tag    (propertize "E" 'face '((:background "orange" :foreground "black")))
-      evil-insert-state-tag   (propertize "I" 'face '((:background "red")))
-      evil-motion-state-tag   (propertize "M" 'face '((:background "blue")))
-      evil-visual-state-tag   (propertize "V" 'face '((:background "grey80" :foreground "black")))
-      evil-operator-state-tag (propertize "O" 'face '((:background "purple"))))
+(setq evil-normal-state-tag   (propertize " N " 'face '((:background "brown" :foreground "white")))
+      evil-emacs-state-tag    (propertize " E " 'face '((:background "red" :foreground "white")))
+      evil-insert-state-tag   (propertize " I " 'face '((:background "YellowGreen" :foreground "white")))
+      evil-motion-state-tag   (propertize " M " 'face '((:background "blue")))
+      evil-visual-state-tag   (propertize " V " 'face '((:background "grey80" :foreground "black")))
+      evil-operator-state-tag (propertize " O " 'face '((:background "purple")))
+      evil-normal-state-cursor `(box "Orange")
+      evil-motion-state-cursor `(box "Red")
+      evil-insert-state-cursor '(bar "YellowGreen")
+      evil-emacs-state-cursor  '(bar "YellowGreen")
+      evil-visual-state-cursor `(box ,(face-attribute 'font-lock-keyword-face :foreground))
+      )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Key Bindings
