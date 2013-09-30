@@ -41,7 +41,7 @@
 (require 'init-tags)
 (require 'init-my-functions)
 (require 'init-yasnippet)
-;; (require 'init-auto-save)
+(require 'init-auto-save)
 
 ;;----------------------------------------------------------------------------
 ;;
