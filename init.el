@@ -39,6 +39,7 @@
 (require 'init-ack)
 (require 'init-cursor-move)
 (require 'init-tags)
+(require 'init-my-functions)
 
 ;;----------------------------------------------------------------------------
 ;;
