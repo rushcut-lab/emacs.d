@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: instance_method
+# key: me
+# --
+${1:method_name}: ${2:(${3:params})} ->
+                  $0

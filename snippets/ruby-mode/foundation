@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: foundation
+# key: gem
+# --
+gem 'zurb-foundation', '~> 4.0.0'

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: hash
+# binding: C-c C-p
+# --
+{$1, $2}$0

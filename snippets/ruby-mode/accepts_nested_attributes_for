@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: accepts_nested_attributes_for
+# key: acc
+# --
+accepts_nested_attributes_for :$1

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: select_tag
+# key: select
+# --
+<%= f.select :${1:attribute}, ${2:${1:$(capitalize text)}}.all.map {|${3:e}| [$3.name, $3.id]}${4:, {include_blank: true}} %>

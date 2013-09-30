@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: spec_fatory
+# key: include_factory
+# --
+config.include FactoryGirl::Syntax::Methods

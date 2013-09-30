@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: ase
+# key: ase
+# --
+(should (equal ${1:actual} ${2:expected}))

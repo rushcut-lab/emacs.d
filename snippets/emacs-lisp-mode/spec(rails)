@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: spec(rails)
+# key: specr
+# --
+require 'spec_helper'
+
+describe ${1:`(replace-regexp-in-string "_" "" (capitalize (replace-regexp-in-string "_spec$" "" (file-name-base))))`} do
+         $0
+end

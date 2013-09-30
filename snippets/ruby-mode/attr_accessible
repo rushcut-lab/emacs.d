@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: attr_accessible
+# key: attr
+# --
+attr_accessible :$1

@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: factory
+# key: factory
+# --
+FactoryGirl.define do
+
+  factory $1 do
+    $0
+  end
+
+end

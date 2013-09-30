@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: printf
+# key: pp
+# --
+${1:t}printf("$2: $3", ${2:var});

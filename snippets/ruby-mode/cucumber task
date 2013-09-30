@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: cucumber task
+# key: rake
+# --
+# cucumber
+require 'cucumber'
+require 'cucumber/rake/task'
+Cucumber::Rake::Task.new :cucumber ${1:do |t|
+$0
+end}

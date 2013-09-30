@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: class
+# key: cla
+# --
+package `(replace-regexp-in-string "/" "." (replace-regexp-in-string "/$" "" (replace-regexp-in-string ".*?src/\\(main\\|test\\)/java/" "" (file-name-directory buffer-file-name))))`;
+
+public class `(replace-regexp-in-string ".java" "" (file-name-base))` {
+
+      public `(replace-regexp-in-string ".java" "" (file-name-base))`() {
+             $0
+      }
+}

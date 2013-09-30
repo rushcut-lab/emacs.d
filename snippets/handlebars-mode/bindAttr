@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: bindAttr
+# key: ba
+# --
+{{bindAttr ${1:x}="$2"}}

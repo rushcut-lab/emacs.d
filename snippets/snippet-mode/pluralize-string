@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: pluralize-string
+# key: pl
+# --
+\$\{${1:1}:$(pluralize-string text)\}

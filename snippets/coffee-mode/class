@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: class
+# key: cla
+# --
+class $1
+      constructor: ${2:(${3:params})} ->
+
+@$1 = $1

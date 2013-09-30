@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: vagrant
+# key: vagrant
+# --
+config.ssh.forward_agent = true
+# config.ssh.private_key_path = "~/.ssh/id_rsa"
+
+config.vm.forward_port 80, 8080
+config.vm.forward_port 3000, 3030
+
+config.vm.customize ["modifyvm", :id, "--natdnsproxy1", "off"]
+config.vm.customize ["modifyvm", :id, "--natdnshostresolver1", "off"]

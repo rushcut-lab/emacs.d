@@ -1,0 +1,4 @@
+# key: log
+# name: cout
+# --
+cout << "$1: " << ${1:attr} <<endl;

@@ -1,0 +1,25 @@
+# -*- mode: snippet -*-
+# name: gem test(rails)
+# key: gem
+# --
+group :development, :test do
+  gem 'thin'
+  gem 'quiet_assets'
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
+  gem 'spork-rails'
+  gem 'guard-spork'
+  gem 'ruby_parser'
+  gem 'jasminerice'
+end
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'cucumber'
+  gem 'cucumber-rails', require: false
+  gem 'rspec-rails'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'selenium-webdriver'
+  gem 'json_spec'
+end

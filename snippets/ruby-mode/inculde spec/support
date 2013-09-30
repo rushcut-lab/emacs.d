@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: inculde spec/support
+# key: support
+# --
+Dir[File.expand_path('$1../support/**/*.rb', __FILE__)].each { |f| require f }

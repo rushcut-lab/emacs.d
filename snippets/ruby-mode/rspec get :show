@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: rspec get :show
+# key: get_show
+# --
+describe 'GET show' do
+  it 'show 페이지를 렌더링 해야 한다' do
+    ${1:article} = create(:$1)
+    get :show, id: $1.id
+    response.should render_template('show')
+  end
+  it '요청된 ${1:$(camelize text)}가 @$1에 대입되어야 한다' do
+    $1 = create(:$1)
+    get :show, id: $1.id
+    assigns(:$1).should eq $1
+  end
+end

@@ -1,0 +1,29 @@
+# -*- mode: snippet -*-
+# name: post_create
+# key: post_create
+# --
+describe 'POST create' do
+  context '유요한 파라미터' do
+    before :each do
+      post :create, ${1:article}: attributes_for(:$1)
+    end
+    it '생성된 ${1:$(camelize text)} 페이지로 리다이렉트 되어야 한다' do
+      response.should redirect_to ${1:$(camelize text)}.last
+    end
+    it '저장된 ${1:$(camelize text)}가 @$1에 대입되어야 한다' do
+      assigns(:$1).should be_persisted
+    end
+  end
+  context '유효하지 않은 파라미터' do
+    before :each do
+      ${1:$(camelize text)}.any_instance.should_receive(:save) { false }
+      post :create, {}
+    end
+    it '저장되지 않은 ${1:$(camelize text)}가 @build에 대입되어야 한다' do
+      assigns(:$1).should be_a_new(${1:$(camelize text)})
+    end
+    it 'new 페이지를 렌더링 해야 한다' do
+      response.should render_template('new')
+    end
+  end
+end

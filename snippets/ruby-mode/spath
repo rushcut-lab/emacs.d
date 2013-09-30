@@ -1,0 +1,25 @@
+# -*- mode: snippet -*-
+# name: spath
+# key: spath
+# --
+module Path
+
+  def root_path(sub = '')
+    File.join(File.expand_path('../../..', __FILE__), sub)
+  end
+
+  def fixtures_path(sub = '')
+    File.join(root_path, 'spec/fixtures', sub)
+  end
+
+  def sandbox_path(sub = '')
+    File.join(root_path, 'tmp/sandbox', sub)
+  end
+
+  def tessdata_path(sub = '')
+    File.join(sandbox_path, 'tessdata', sub)
+  end
+
+end
+
+include Path

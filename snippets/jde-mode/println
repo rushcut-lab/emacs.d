@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: println
+# key: pp
+# --
+System.out.println("===============================");
+System.out.println("$1");

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: tempfile
+# key: tempfile
+# --
+${1:attachment}.queued_for_write[:original]

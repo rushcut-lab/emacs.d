@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: sal
+# key: sal
+# --
+alias ${1:이름}     move ${2:screenOriginX};${3:screenOriginY}             ${4:screenSizeX};${5:screenSizeY}

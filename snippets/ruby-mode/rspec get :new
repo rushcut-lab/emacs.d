@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: rspec get :new
+# key: get_new
+# --
+describe 'GET new' do
+  before :each do
+    get :new
+  end
+  it '새로운 ${1:$(camelize text)}가 @${1:article}에 대입되어야 한다' do
+    assigns(:$1).should be_a_new(${1:$(camelize text)})
+  end
+  it 'new 페이지를 렌더링 해야 한다' do
+    response.should render_template('new')
+  end
+end

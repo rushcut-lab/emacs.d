@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: cprintf
+# key: cp
+# --
+cprintf("$1\n", $2);

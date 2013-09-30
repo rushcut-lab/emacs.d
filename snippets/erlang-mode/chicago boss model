@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: chicago boss model
+# key: clm
+# --
+-module(${1:`(file-name-base)`}, [Id, $2]).
+-compile(export_all).

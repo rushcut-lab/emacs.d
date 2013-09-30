@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: shook
+# key: shook
+# --
+module Hook
+
+  def prepare_sandbox
+    FileUtils.rm_rf(sandbox_path)
+    FileUtils.mkdir_p(sandbox_path)
+    Dir.chdir(sandbox_path)
+  end
+
+  def prepare_fixtures
+    FileUtils.mkdir_p(sandbox_path)
+    FileUtils.cp_r(Dir.glob(fixtures_path("**")), sandbox_path)
+  end
+
+end
+
+include Hook

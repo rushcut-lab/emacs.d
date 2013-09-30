@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: each
+# key: ea
+# --
+{{#each$1}}
+$0
+{{/each}}

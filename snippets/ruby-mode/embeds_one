@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: embeds_one
+# key: em
+# --
+embeds_one :$1

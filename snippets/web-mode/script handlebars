@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: handlebars
+# key: script
+# --
+<script type="text/x-handlebars" data-template-name="${1:todos}">
+        $1
+</script>

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: expression with html tag
+# key: ,,
+# --
+<${1:p} class="${2:$(ruby-last-value text)}"><%= ${2:attr} %></$1>

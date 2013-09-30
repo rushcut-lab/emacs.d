@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: public method
+# key: pm
+# --
+public ${1:void} ${2:method_name}($3) {
+       $0
+}

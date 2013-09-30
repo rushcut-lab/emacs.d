@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: each do |e|
+# key: ea
+# --
+<% ${1:elements}.each do |${1:$(ruby-singularize-last-string text)}| %>
+  $0
+<% end %>

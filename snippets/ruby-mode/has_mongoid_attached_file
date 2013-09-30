@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: has_mongoid_attached_file
+# key: paperclip
+# --
+has_mongoid_attached_file :${1:image}, :styles => { thumb: ["500x500>", :jpg], jpg: ["100%", :jpg] }

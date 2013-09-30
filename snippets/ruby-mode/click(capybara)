@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: click(capybara)
+# key: click
+# --
+first(:css, "input[type=submit]").click

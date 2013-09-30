@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: form_for
+# key: form_for
+# --
+<%= form_for(${1:model}) do |f| %>
+  <% if $1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize($1.errors.count, "error") %> prohibited this estate from being saved:</h2>
+      <ul>
+      <% $1.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  $0
+
+<% end %>

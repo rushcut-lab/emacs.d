@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: add gem thin
+# key: thin
+# --
+group :development do
+  gem "thin"
+  gem "quiet_assets"
+end

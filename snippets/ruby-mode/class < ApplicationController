@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: class < ApplicationController
+# key: clc
+# --
+class ${1:`(replace-regexp-in-string "_" "" (capitalize (file-name-base)))`} < ${2:ApplicationController}
+
+      $0
+
+end

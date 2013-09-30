@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: before :each
+# key: before
+# --
+before :each do
+       $0
+end

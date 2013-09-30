@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: gem 'active_model_serializers'
+# key: gem
+# --
+gem 'active_model_serializers'

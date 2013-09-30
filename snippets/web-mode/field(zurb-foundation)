@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: field(zurb-foundation)
+# key: fi
+# --
+<!-- $1 -->
+<div class="small-${4:2} large-${6:2} columns">
+  <%= f.label :${1:title}, "${3:제목}", class:"right inline" %>
+  </div>
+<div class="small-${5:10} large-${7:4} columns">
+  <%= f.${2:text_field} :$1 %>
+  </div>
+<!-- $1 ends here -->

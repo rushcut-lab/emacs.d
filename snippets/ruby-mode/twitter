@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: twitter
+# key: gem
+# --
+gem "twitter-bootstrap-rails"
+gem "less-rails"
+gem "therubyracer", :platforms => :ruby

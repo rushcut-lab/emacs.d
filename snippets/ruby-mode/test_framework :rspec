@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: test_framework :rspec
+# key: config
+# --
+config.generators do |g|
+                  g.test_framework :rspec
+end
+config.sass_options = {:cache_location => "#{Rails.root.join('sass-cache')}"}

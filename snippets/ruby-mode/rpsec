@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: rpsec
+# key: rspec
+# --
+`(rspec-first-desc)`

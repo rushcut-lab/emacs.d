@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: font
+# key: font
+# --
+font-family: Helvetica, arial, freesans, clean, sans-serif;

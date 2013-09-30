@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: label-field 2-10 (zurb)
+# key: fi
+# --
+<!-- $1 -->
+<div class='small-2 large-2 columns'>
+  <%= f.label :$1, class: "inline right" %>
+</div>
+<div class='small-10 large-10 columns'>
+  <%= f.${2:text_field} :$1 %>
+</div>
+<!-- $1 ends here -->

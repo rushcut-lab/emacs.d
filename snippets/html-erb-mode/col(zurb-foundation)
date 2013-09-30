@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: colum(zurb-foundation)
+# key: col
+# --
+<!-- $1 -->
+<div class="small-${3:2} large-${5:2} columns">
+  <label for="id" class="right inline">${2:label}</label>
+</div>
+<div class="small-${4:10} large-${6:4} columns">
+  ${2:value}
+</div>
+<!-- $1 ends here -->

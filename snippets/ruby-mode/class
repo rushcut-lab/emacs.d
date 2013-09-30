@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: class
+# key: cla
+# --
+class ${1:`(replace-regexp-in-string "_" "" (capitalize (file-name-base)))`}
+      $0
+end

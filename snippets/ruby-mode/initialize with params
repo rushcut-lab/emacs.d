@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: initialize with params
+# key: init
+# --
+def initialize ${1:params}
+${1:$(mapconcat 'identity (mapcar (lambda (e) (concat "@" (chomp e) " = " (chomp e))) (split-string text ",")) "\n")}
+end

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: ffi
+# key: ffi
+# --
+${1:cpp}.function %{
+${2:int} ${3:init} (${4:params}) {
+$0
+}
+}

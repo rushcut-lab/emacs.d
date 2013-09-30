@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: rspec get :index
+# key: get_index
+# --
+describe 'GET index' do
+  it 'index를 렌더링 해야 한다' do
+    get :index
+    response.should render_template('index')
+  end
+  it '모든 ${1:$(camelize text)}들이 @${1:$(pluralize-string text)}에 대입되어야 한다' do
+    $1 = create(:${1:article})
+    get :index
+    assigns(:${1:$(pluralize-string text)}).should eq [$1]
+  end
+end

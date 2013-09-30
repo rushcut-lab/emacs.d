@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: this.var = var;
+# key: this
+# --
+this.${1:name} = $1;

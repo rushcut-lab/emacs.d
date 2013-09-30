@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: submit_tag
+# key: su
+# --
+<div class="actions">
+  <%= f.submit "${1:저장}"${2:, class: "btn btn-success"} %>
+</div>

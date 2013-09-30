@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: font-face
+# key: font
+# --
+@font-face {
+    font-family: ${1:Bitstream};
+    src: url("/assets/${2:Vera}.${3:ttf}") format("${4:truetype}"); /* For IE */
+    src: local("$1"), url("/assets/$2.$3") format("$4"); /* For non-IE */
+    font-size: ${5:12}px;
+}

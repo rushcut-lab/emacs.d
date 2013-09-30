@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: embedded_in
+# key: em
+# --
+embedded_in :$1

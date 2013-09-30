@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: stub_template
+# key: stub
+# --
+stub_template "${1:builders}/_${2:sample}" => "<div id='${3:sample}'></div>"
+render
+assert_select "#$3"

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: thin
+# key: gem
+# --
+gem "thin"
+gem "quiet_assets"

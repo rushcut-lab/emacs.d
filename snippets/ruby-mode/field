@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: field
+# key: fi
+# --
+field :$1, type: ${2:String}${3:, default: ${4:''}}

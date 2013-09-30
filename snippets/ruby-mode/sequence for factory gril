@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: sequence for factory gril
+# key: seq
+# --
+sequence(:${1:attr}) {|n| ${2:"$1#{n}"} }

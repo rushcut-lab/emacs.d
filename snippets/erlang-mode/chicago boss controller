@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: chicago boss controller
+# key: clc
+# --
+-module(${1:`(file-name-base)`}, [Req]).
+-compile(export_all).
+
+${2:index}('GET', []) ->
+    ${3:{output, "<strong>Hello Chicago Boss!</strong>"}.}

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: jasmine
+# key: gem
+# --
+group :test, :development do
+  gem 'jasminerice'
+  gem 'guard-jasmine'
+end

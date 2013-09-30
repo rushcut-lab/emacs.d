@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: class Model for mongoid
+# key: clmm
+# --
+class ${1:`(replace-regexp-in-string "_" "" (capitalize (file-name-base)))`}
+      include Mongoid:Dcoument
+      $0
+end

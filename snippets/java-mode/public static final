@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: public static final
+# key: pusf
+# --
+public static final ${1:String} ${2:NAME};

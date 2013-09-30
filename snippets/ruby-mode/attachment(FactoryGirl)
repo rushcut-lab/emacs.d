@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: attachment(FactoryGirl)
+# key: attachment
+# --
+include ActionDispatch::TestProcess
+${1:attachment} { fixture_file_upload(Rails.root.join("spec/fixtures/${2:rails.tif}"), '${3:image/tif}') }

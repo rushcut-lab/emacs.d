@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: for movieclips
+# key: form
+# --
+for(var i:int=0; i < ${1:mc}.numChildren ; i++) {
+    var clip:MovieClip = $1.getChildAt(i);
+    $0
+}

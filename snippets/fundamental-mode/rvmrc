@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: rvmrc
+# key: rvm
+# --
+rvm use --create 2.0.0-p0@$1

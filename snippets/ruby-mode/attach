@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: attach
+# key: attach
+# --
+file = Rack::Test::UploadedFile.new(fixtures("${1:sample.tif}"), "image/${2:tiff}")

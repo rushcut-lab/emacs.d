@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: end
+# key: C-c C-c
+# binding: direct-keybinding
+# type: command
+# --
+().

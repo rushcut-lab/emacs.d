@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: env(gem)
+# key: env
+# --
+Dir[File.expand_path("../../../spec/support/**/*.rb", __FILE__)].each { |f| require f }
+include Path
+require root_path.join("lib/$1")

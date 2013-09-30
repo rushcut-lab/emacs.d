@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: class with module
+# key: clam
+# --
+`(ruby-module-defs)`
+class ${1:`(replace-regexp-in-string "_" "" (capitalize (file-name-base)))`}
+      $0
+end
+`(ruby-module-defs-ends)`

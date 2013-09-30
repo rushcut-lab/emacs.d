@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: list-style-type
+# key: list
+# --
+list-style-type: none;

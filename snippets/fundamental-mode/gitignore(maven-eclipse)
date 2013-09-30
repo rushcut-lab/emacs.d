@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: gitignore(maven-eclipse)
+# key: gitignore
+# --
+.classpath
+.project
+.settings/
+target/

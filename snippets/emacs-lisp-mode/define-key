@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: define-key
+# key: dk
+# --
+(define-key ${1:org}-mode-map (kbd "${2:C-c o t}") $3)

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: jquery-fileupload
+# key: require
+# --
+//= require jquery-fileupload

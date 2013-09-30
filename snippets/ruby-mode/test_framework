@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: test_framework
+# key: test_framework
+# --
+config.generators do |g|
+                  g.test_framework :rspec
+end

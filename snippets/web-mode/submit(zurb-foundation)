@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: submit(zurb-foundation)
+# key: su
+# --
+<!-- submit -->
+<div class="row">
+  <div class="small-12 large-12 text-center columns">
+    <br /><%= f.submit "저장", class: "button small" %>
+  </div>
+</div>
+<!-- submit ends here -->
