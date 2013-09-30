@@ -31,6 +31,7 @@
 (require 'init-emacs-preference)
 (require 'init-font)
 (require 'init-ido)
+(require 'init-textmate)
 (require 'init-theme)
 (require 'init-git)
 (require 'init-ack)
