@@ -35,6 +35,7 @@
 (require 'init-git)
 (require 'init-ack)
 (require 'init-editing)
+(require 'init-cursor-move)
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
