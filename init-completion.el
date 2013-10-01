@@ -47,13 +47,13 @@
   (ac-stop))
 
 (fill-keymap ac-completing-map
-             "C-[" 'ac-exit-to-normal-state
+             ;; "C-[" 'ac-exit-to-normal-state
+             ;; "C-g" 'ac-stop
+             ;; "ESC" 'ac-stop
              "C-l" 'ac-expand-common
              "C-n" 'ac-next
              "C-s" 'ac-isearch
-             "C-p" 'ac-previous
-             "C-g" 'ac-stop
-             "ESC" 'ac-stop)
+             "C-p" 'ac-previous)
 
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; HIPPIE
