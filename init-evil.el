@@ -1,5 +1,5 @@
 (setq evil-toggle-key "C-M-\\")
-(require-package 'evil)
+(require 'evil)
 
 (evil-mode 1)
 (setq evil-default-cursor t)
@@ -33,7 +33,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Key Bindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
 (define-key evil-visual-state-map [escape] 'keyboard-quit)
 (define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
@@ -47,7 +46,7 @@
 (define-key evil-normal-state-map " l" 'ace-jump-line-mode)
 (define-key evil-normal-state-map " s" 'textmate-goto-symbol)
 (define-key evil-normal-state-map " m" 'evil-jump-item)
-(define-key evil-normal-state-map ",," 'evil-buffer)
+(define-key evil-normal-state-map " b" 'evil-buffer)
 (define-key evil-normal-state-map "-" 'delete-other-windows)
 (define-key evil-normal-state-map "B" 'ido-switch-buffer)
 (define-key evil-normal-state-map "E" 'ido-find-file)
@@ -85,4 +84,16 @@
 (defalias 'eon 'turn-on-evil-mode)
 (defalias 'eoff 'turn-off-evil-mode)
 
+   ;; change mode-line color by evil state
+   (lexical-let ((default-color (cons (face-background 'mode-line)
+                                      (face-foreground 'mode-line))))
+     (add-hook 'post-command-hook
+       (lambda ()
+         (let ((color (cond ((minibufferp) default-color)
+                            ((evil-insert-state-p) '("Green". "#ffffff"))
+                            ((evil-emacs-state-p)  '("Red" . "#ffffff"))
+                            ((buffer-modified-p)   '("#006fa0" . "#ffffff"))
+                            (t default-color))))
+           (set-face-background 'mode-line (car color))
+           (set-face-foreground 'mode-line (cdr color))))))
 (provide 'init-evil)
