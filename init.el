@@ -1,3 +1,5 @@
+(defvar user-home-directory (concat (getenv "HOME") "/"))
+
 ;;; This file bootstraps the configuration, which is divided into
 ;;; a number of other files.
 
@@ -28,6 +30,8 @@
 ;; CORE
 ;;
 ;;----------------------------------------------------------------------------
+(require 's)
+(require 'f)
 (require 'init-emacs-preference)
 (require 'init-editing)
 (require 'init-completion)
@@ -42,6 +46,8 @@
 (require 'init-my-functions)
 (require 'init-yasnippet)
 (require 'init-auto-save)
+(require 'init-parens)
+(require 'init-regexp)
 
 ;;----------------------------------------------------------------------------
 ;;
@@ -67,6 +73,7 @@
 ;;----------------------------------------------------------------------------
 (require 'init-rails)
 (require 'init-lisp)
+(require 'init-org)
 
 
 
@@ -103,3 +110,21 @@
 ;; coding: utf-8
 ;; no-byte-compile: t
 ;; End:
+
+
+(defun beautify-json ()
+  (interactive)
+  (let ((b (if mark-active (min (point) (mark)) (point-min)))
+        (e (if mark-active (max (point) (mark)) (point-max))))
+    (shell-command-on-region b e
+                             "python -c 'import sys,json; data=json.loads(sys.stdin.read()); print json.dumps(data,sort_keys=True,indent=4).decode(\"unicode_escape\").encode(\"utf8\",\"replace\")'" (current-buffer) t)))
+
+
+(defun ruby-run-this-buffer ()
+  (interactive)
+  (save-buffer)
+  (setq cur (selected-window))
+  (ruby-compilation-this-buffer)
+  (select-window cur))
+
+(define-key ruby-mode-map (kbd "C-x C-e") 'ruby-run-this-buffer)
