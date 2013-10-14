@@ -1,3 +1,13 @@
+(require-package 'paredit)
+(setq ruby-deep-indent-paren nil)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; RUBY-MODE DETECT
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-auto-mode 'ruby-mode "Rakefile" "\\.rake\\'" "\\.ru\\'" "\\.prawn\\'"
+               "Gemfile\\'" "Capfile\\'" "Guardfile\\'" "\\.gemspec$")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;; RVM
@@ -5,7 +15,33 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require-package 'rvm)
 (rvm-use-default)
-(add-hook 'feature-mode-hook 'rvm-activate-corresponding-ruby)
+
+(setq current-rvmrc nil)
+
+(defun rvm-corresponding-ruby-eproject ()
+  (if (ignore-errors (eproject-name))
+      (let ((rvmrc (concat (eproject-name) "/.rvmrc")))
+        (if (file-exists-p rvmrc)
+            (unless (= current-rvmrc rvmrc)
+              (rvm-activate-corresponding-ruby))
+          )
+        (setq current-rvmrc rvmrc))))
+
+;; use rvm when buffer changed.
+;; TODO: DRY
+(defadvice switch-to-buffer (before save-buffer-now activate)
+  (when buffer-file-name (rvm-corresponding-ruby-eproject)))
+(defadvice other-window (before other-window-now activate)
+  (when buffer-file-name (rvm-corresponding-ruby-eproject)))
+(defadvice windmove-up (before other-window-now activate)
+  (when buffer-file-name (rvm-corresponding-ruby-eproject)))
+(defadvice windmove-down (before other-window-now activate)
+  (when buffer-file-name (rvm-corresponding-ruby-eproject)))
+(defadvice windmove-left (before other-window-now activate)
+  (when buffer-file-name (rvm-corresponding-ruby-eproject)))
+(defadvice windmove-right (before other-window-now activate)
+  (when buffer-file-name (rvm-corresponding-ruby-eproject)))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
@@ -14,6 +50,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'feature-mode)
 (setq feature-default-language "ko")
+
+;; Save current buffer (not feature buffer)
+(defadvice feature-run-cucumber (before save-buffer-now activate)
+  (when buffer-file-name (save-buffer)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
@@ -28,6 +68,7 @@
   '(progn
      (diminish 'rinari-minor-mode "Rin")
      (define-key rinari-minor-mode-map (kbd "C-c r f") 'rinari-find-features)
+     (define-key rinari-minor-mode-map (kbd "C-c r u") 'rinari-find-features-support)
      (define-key rinari-minor-mode-map (kbd "C-c r m") 'rinari-find-model)
      (define-key rinari-minor-mode-map (kbd "C-c r c") 'rinari-find-controller)
      (define-key rinari-minor-mode-map (kbd "C-c r s") 'rinari-find-steps)
@@ -84,5 +125,7 @@
 ;; (evil-ex-define-cmd "Rjavascript" 'rinari-find-javascript)
 ;; (evil-ex-define-cmd "Rfeature"    'rinari-find-festures)
 ;; (evil-ex-define-cmd "Rserver"     'rinari-web-server-restart)
+
+(define-key ruby-mode-map (kbd "C-c r k") 'ruby-support-create-reverse-file)
 
 (provide 'init-rails)
