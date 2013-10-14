@@ -69,6 +69,7 @@
   (rainbow-delimiters-mode t)
   (enable-paredit-mode)
   (turn-on-eldoc-mode)
+  (eldoc-post-insert-mode)
   (redshank-mode))
 
 (defun sanityinc/emacs-lisp-setup ()
