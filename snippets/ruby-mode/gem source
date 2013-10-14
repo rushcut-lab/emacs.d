@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: gem source
+# key: gem
+# --
+source "https://rubygems.org"
+
+gem "rake"
+
+group :development do
+  gem "cucumber"
+  gem "rspec"
+end

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: default task
+# key: rake
+# --
+task default: [:spec, :cucumber]
