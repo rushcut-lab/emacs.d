@@ -1,8 +1,16 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 ;; (load-theme 'zenburn t)
-(setq cursor-type 'bar)
-(load-theme 'tango t)
+;; (setq cursor-type 'bar)
+;; (load-theme 'tango t)
+
+
+;;----------------------------------------------------------------------------
+;; RailsCasts
+;;----------------------------------------------------------------------------
+(load-theme 'railscasts t)
+(set-cursor-color 'orange)
+
 
 ;;(require-package 'color-theme-sanityinc-solarized)
 
