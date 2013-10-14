@@ -65,6 +65,7 @@
     (hippie-expand nil)))
 
 (global-set-key (kbd "M-o") 'hippie-expand-lines)
+(global-set-key (kbd "M-ㅐ") 'hippie-expand-lines)
 
 (setq hippie-expand-try-functions-list
       '(try-complete-file-name-partially
