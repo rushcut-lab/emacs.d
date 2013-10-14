@@ -3,7 +3,7 @@
 ;; YASNIPPET
 ;;
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require-package 'yasnippet)
+(require 'yasnippet)
 (setq yas-snippet-dirs '("~/.emacs.d/snippets"))
 (setq yas/indent-line 'auto)
 
@@ -12,6 +12,7 @@
             (define-key yas-minor-mode-map (kbd "TAB") nil)
             (define-key yas-minor-mode-map [(tab)] nil)))
 
+(global-unset-key (kbd "M-RET"))
 (define-key global-map (kbd "M-RET") 'yas-expand)
 
 (yas-global-mode t)
